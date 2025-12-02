@@ -59,14 +59,12 @@ $$\{太平洋，大西洋，印度洋，北冰\}$$
 
 为了更直观的表示集合之前的关系，数学中， ⽤<font color='yellow'>平⾯上封闭曲线的内部</font>代表集合，这种图称为**Venn图**。
 
-|| 子集 | 真子集 |
-| -- | -- | -- |
+|  | 子集 | 真子集 | 相等 |
+| -- | -- | -- | -- |
 | 定义 | 集合$A$中所有的元素都在集合$B$中 | 集合$A$中所有的元素都在集合$B$中，<font color='yellow'>但集合$B$的元素有不在$A$中的</font> |
-| 符号 | $A\subseteq B$或$B\supseteq A$ | $A\subsetneqq B$或$B\supsetneqq A$ |
-| 读法 | $A$包含于$B$ 或 $B$包含$A$ | $A$真包含于$B$ 或 $B$真包含$A$ |
+| 符号 | $A\subseteq B$或$B\supseteq A$ | $A\subsetneqq B$或$B\supsetneqq A$ | $A=B$ |
+| 读法 | $A$包含于$B$ 或 $B$包含$A$ | $A$真包含于$B$ 或 $B$真包含$A$ | $A$等于$B$ |
 | 关系式 | $x\in A\Rightarrow x\in B$ | $x\in A \Rightarrow x\in B$，但$\exist y\in B$且$y\notin A$ |
-| Venn图 | <img src="./imges/1-set/a_subset_b.png" width="160"></img> 或 <img src="./imges/1-set/a_eq_b.png" width="160"></img> | <img src="./imges/1-set/a_subset_b.png" width="160"></img> |
-
-
+| Venn图 | <img src="./imges/1-set/a_subset_b.png" width="160"></img> | <img src="./imges/1-set/a_subset_b.png" width="160"></img> | <img src="./imges/1-set/a_eq_b.png" width="160"></img> |
 
 ### 3 集合的基本运算
