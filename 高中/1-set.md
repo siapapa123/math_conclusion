@@ -5,6 +5,8 @@
   - [1.4 常见的几种集合](#14-常见的几种集合)
 - [2 集合间的基本关系](#2-集合间的基本关系)
 - [3 集合的基本运算](#3-集合的基本运算)
+  - [3.1 交、并、补的定义](#31-交并补的定义)
+  - [3.2 区间](#32-区间)
 
 ### 1 集合的概念
 
@@ -67,4 +69,55 @@ $$\{太平洋，大西洋，印度洋，北冰\}$$
 | 关系式 | $x\in A\Rightarrow x\in B$ | $x\in A \Rightarrow x\in B$，但$\exist y\in B$且$y\notin A$ |
 | Venn图 | <img src="./imges/1-set/a_subset_b.png" width="160"></img> | <img src="./imges/1-set/a_subset_b.png" width="160"></img> | <img src="./imges/1-set/a_eq_b.png" width="160"></img> |
 
+* 集合$A、B$相等的充要条件是$A\subseteq B$且$B\subseteq A$。
+* 任意集合都是它自身的子集，$A\subseteq A$。
+* $\varnothing$是一个非常特殊的集合，切记不要遗漏它；$\varnothing$是<font color='yellow'>任何集合的子集</font>，**包括它自己**，是任意<font color='yellow'>非空集合的真子集</font>。
+* 集合关系具有**传递性**，即$A\subseteq B$，$B\subseteq C$，则$A\subseteq C$。
+* 具有$n$个元素的集合，它的子集个数为$2^n$，真子集$2^n-1$个，非空真子集$2^n-2$个，感兴趣的可以看看下面的推导过程：
+
+> (1) $\varnothing$：1
+> (2) 1个元素：$C_n^1$
+> (3) 2个元素：$C_n^2$
+> (4) 3个元素：$C_n^3$
+> $\cdots$
+> (n+1) n个元素，即它自身：$C_n^n=1$
+> $\therefore$ 总数=$1+C_n^1+C_n^2+C_n^3+\cdots+C_n^n=(1+1)^n=2^n$
+> 从而其他的非空子集个数，非空真子集个数就能计算得出了。
+
+例题2. 在平面直角坐标系中，集合$C=\{(x,y)|y=x\}$表示直线$y=x$，从这个角度看，集合
+$$D=\left\{(x,y)|\begin{cases}
+  2x-y=1\\
+  x+4y=5
+\end{cases} \right\}$$
+表示什么？集合$C、D$之间的关系是什么？（源于课本）
+
+解：
+显然集合$C、D$都是平面直角坐标系中的点集，只是$C$中的元素刚好形成$y=x$这条直线，而$D$的元素是“|“后面方程组的解集
+于是$\begin{cases}2x-y=1\\x+4y=5\end{cases}\Rightarrow x=y=1$，故$D=\{(1,1)\}$
+显然$D$中仅有的一个点$(1,1)$也在直线$y=x$上，故$D\subseteq C$，更确切的说是$D\subsetneqq C$
+
 ### 3 集合的基本运算
+
+> 实数有四则运算，集合也有类似的运算，叫做：**交、并、补**
+
+#### 3.1 交、并、补的定义
+
+|| 交集 | 并集 | 补集 |
+| -- | -- | -- | -- |
+| 定义 | 由所有集合$A、B$中<font color='yellow'>共同的元素</font>组成的集合 | 集合$A、B$中<font color='yellow'>所有的元素</font>组成的集合 | 包含所有研究对象的集合称为**全集**，记作$U$。<br>由全集中，<font color='yellow'>不属于集合$A$的元素</font>组成的集合叫<br>集合$A$相对于全集$U$的**补集** |
+| 数学关系 | $A\cap B=\{x\in A，且x\in B\}$ | $A\cup B = \{x\in A，或x\in B\}$ | $\complement_uA=\{x\in U，且x\notin A\}$ |
+| Venn图 | <img src="./imges/1-set/a_cap_b.png" width="200"></img> | <img src="./imges/1-set/a_cup_b.png" width="200"></img> | <img src="./imges/1-set/u_complement_a.png" width="200"></img> |
+
+#### 3.2 区间
+
+为了更方便的表示**数集**，数学中引入了**区间**的概念。将“大于“和“大于等于“用符号 “$($“ 和 "$[$" 来表示，“小于“和“小于等于“用符号 “$)$“ 和 "$]$" 来表示，其中 “$($“ 和 “$)$“ 读作开区间，“$[$“ 和 “$]$“ 读作闭区间。例如大于5小于等于10的实数就可以表示为$(5,10]$，它是一个左开右闭的区间，在数轴上可以这样表示
+
+<center>
+<img src="./imges/1-set/5_to_10.png" width="600"></img>
+</center>
+
+同样，对于集合$A=[-1,7)、B=(5,10]$的交集$A\cap B=(5,7)$可以如下方式表示
+
+<center>
+<img src="./imges/1-set/cap_5_to_7.png" width="600"></img>
+</center>
