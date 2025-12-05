@@ -7,6 +7,7 @@
 - [3 集合的基本运算](#3-集合的基本运算)
   - [3.1 交、并、补的定义](#31-交并补的定义)
   - [3.2 区间](#32-区间)
+  - [3.3 常见的运算特性](#33-常见的运算特性)
 
 ### 1 集合的概念
 
@@ -121,3 +122,44 @@ $$D=\left\{(x,y)|\begin{cases}
 <center>
 <img src="./imges/1-set/cap_5_to_7.png" width="600"></img>
 </center>
+
+<font color='red'>注意</font>：后面我们会经常使用数轴的方式分析题目，好用，常用，多用！！！
+
+#### 3.3 常见的运算特性
+
+设$A、B、C$为任意三个集合，$U$为全集，$\varnothing$为空集，则有下面的运算法则成立：
+
+1. 交换律：$A\cup B=B\cup A$，$A\cap B=B\cap A$；
+2. 结合律：
+$$\begin{align}
+  A\cup B\cup C=A\cup(B\cup C)=(A\cup B)\cup C=(A\cup C)\cup B\\
+  A\cap B\cap C=A\cap(B\cap C)=(A\cap B)\cap C=(A\cap C)\cap B
+\end{align}$$
+3. 分配律：
+$$\begin{align}
+  (A\cup B)\cap C=(A\cap C)\cup (B\cap C)\\
+  (A\cap B)\cup C=(A\cup C)\cap (B\cup C)
+\end{align}$$
+4. 摩根律：
+$$\begin{align}
+  \complement_U(A\cap B)=\complement_UA\cup\complement_UB\\
+  \complement_U(A\cup B)=\complement_UA\cap\complement_UB
+\end{align}$$
+5. 等幂律：$A\cup A=A$，$A\cap A=A$；
+6. 吸收律：$(A\cap B)\cup A=A$，$(A\cup B)\cap A = A$；
+7. 同一律：$A\cup \varnothing=A$，$A\cap \varnothing=\varnothing$，$A\cup U=U$，$A\cap U=A$；
+8. 互补律：$A\cap \complement_UA=\varnothing$，$A\cup \complement_UA=U$；
+
+<font color='red'>注意</font>：这8条运算法则，没必要硬记，理解一下即可。
+
+例题3. 设全集$U=R$
+（1）解关于$x$的不等式：$|x-1|+a-1>0（a\in R）$；
+（2）记$A$为（1）中不等式的解集，集合$B=\left\{ x|\sin(\pi x-\dfrac{\pi}{3})+\sqrt{3}\cos(\pi x-\dfrac{\pi}{3})=0 \right\}$，若$(\complement_UA)\cap B$恰有$3$个元素，求$a$的取值范围。
+
+解：（1）$\because |x+1|+a-1>0$，$\therefore |x-1|>1-a$
+（i）当$1-a\leqslant 0$，即$a\geqslant 1$时，$|x-1|\geqslant 0\geqslant 1-a$恒成立，此时解集为$R$
+（ii）当$1-a>0$，即$a<1$时，$|x-1|>1-a\Leftrightarrow x-1>1-a$，或$-(x-1)>1-a$
+$\therefore x>2-a$，或$x<a$，此时不等式的解集为$(-\infty, a)\cup(2-a,+\infty)$
+（2）$B=\left\{ x|\sin(\pi x-\dfrac{\pi}{3})+\sqrt{3}\cos(\pi x-\dfrac{\pi}{3})=0 \right\}=\{x|2\sin(\pi x)=0\}$，$\therefore B=Z$
+又因为$(\complement_UA)\cap B$恰有$3$个元素，$\therefore a < 1$，从而$(\complement_UA)=[a, 2-a]$，故区间$[a,2-a]$内只有三个整数。
+
