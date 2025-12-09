@@ -162,4 +162,11 @@ $$\begin{align}
 $\therefore x>2-a$，或$x<a$，此时不等式的解集为$(-\infty, a)\cup(2-a,+\infty)$
 （2）$B=\left\{ x|\sin(\pi x-\dfrac{\pi}{3})+\sqrt{3}\cos(\pi x-\dfrac{\pi}{3})=0 \right\}=\{x|2\sin(\pi x)=0\}$，$\therefore B=Z$
 又因为$(\complement_UA)\cap B$恰有$3$个元素，$\therefore a < 1$，从而$(\complement_UA)=[a, 2-a]$，故区间$[a,2-a]$内只有三个整数。
+若$a=1$，则区间$[a,2-a]$表示$1$这个点，随着$a$的减小，区间的范围越来越大，区间内包含的整数就越来越多
 
+<center>
+<img src="./imges/1-set/t_3.png" width="680"></img>
+</center>
+
+从上面的数轴可以知道，当刚好有三个整数时，区间端点的距离刚好为$2$，同理，四个时，区间端点距离为$3$，所有$2\leqslant(2-a)-a<3$
+$\therefore-1<a\leqslant 0$，故$a$的取值范围为$(-1,0]$。
